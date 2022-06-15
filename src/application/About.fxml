@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: rgb(240, 240, 240);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AboutController">
+   <children>
+      <ImageView fx:id="logoImage" fitHeight="62.0" fitWidth="349.0" layoutX="178.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconImage" fitHeight="34.0" fitWidth="44.0" layoutX="25.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="80.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mircosoft Windows" />
+      <Text layoutX="80.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="版本 21H2(操作系统内部版本 19044.1645）" />
+      <Text layoutX="80.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©Mircosoft Corporation。 保留所有权利。" />
+      <Text layoutX="80.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Windows 10 家庭中文版 操作系统及其用户界面受美国和其他国家/地区的商标法" />
+      <Text layoutX="80.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="和其他待颁布或已颁布的知识产权法保护。" />
+      <Text layoutX="80.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="根据 Microsoft 软件许可条款， 许可如下用户使用本产品:" />
+      <Text layoutX="110.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Java 记事本-雷昱 22920202204666" />
+      <Button fx:id="confirmButton" layoutX="569.0" layoutY="345.0" mnemonicParsing="false" onAction="#confirmButtonPressed" text="确定" />
+   </children>
+</AnchorPane>

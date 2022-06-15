@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="200.0" maxWidth="480.0" minHeight="200.0" minWidth="480.0" prefHeight="200.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SearchController">
+   <children>
+      <Text layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查找内容(N):" />
+      <TextField fx:id="searchTextField" layoutX="124.0" layoutY="24.0" />
+      <Button fx:id="searchNextButton" layoutX="353.0" layoutY="24.0" mnemonicParsing="false" onAction="#searchNextButtonPressed" text="查找下一个(F)" />
+      <Button fx:id="cancleButton" layoutX="353.0" layoutY="70.0" mnemonicParsing="false" onAction="#cancleButtonPressed" text="取消" />
+      <CheckBox fx:id="caseSensitiveCheckBox" layoutX="32.0" layoutY="100.0" mnemonicParsing="false" text="区分大小写(C)" />
+      <CheckBox fx:id="loopCheckBox" layoutX="32.0" layoutY="133.0" mnemonicParsing="false" text="循环(R)" />
+      <RadioButton fx:id="upRadioButton" layoutX="209.0" layoutY="101.0" mnemonicParsing="false" text="向上">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="downRadioButton" layoutX="281.0" layoutY="101.0" mnemonicParsing="false" selected="true" text="向下" toggleGroup="$toggleGroup" />
+   </children>
+</AnchorPane>

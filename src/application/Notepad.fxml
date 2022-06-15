@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NotepadController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="文件(F)">
+            <items>
+                  <MenuItem fx:id="newMenultem" mnemonicParsing="false" onAction="#newMenultemPressed" text="新建(N)" />
+                  <MenuItem fx:id="newWindowMenultem" mnemonicParsing="false" onAction="#newMenultemPressed" text="新窗口(W)" />
+                  <MenuItem fx:id="openMenultem" mnemonicParsing="false" onAction="#openMenultemPressed" text="打开(O)..." />
+                  <MenuItem fx:id="saveMenultem" mnemonicParsing="false" onAction="#saveMenultemPressed" text="保存(S)" />
+                  <MenuItem fx:id="saveAsMenultem" mnemonicParsing="false" onAction="#saveAsMenultemPressed" text="另存为(A)..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="pageformatMenultem" mnemonicParsing="false" onAction="#pageformatMenultemPressed" text="页面设置(U)..." />
+                  <MenuItem mnemonicParsing="false" text="打印(P)..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="exitMenultem" mnemonicParsing="false" onAction="#exitMenultemPressed" text="退出(X)" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="编辑(E)">
+               <items>
+                  <MenuItem fx:id="undoMenultem" mnemonicParsing="false" onAction="#undoMenultemPressed" text="撤销(U)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="trimMenultem" mnemonicParsing="false" onAction="#trimMenultemPressed" text="剪切(T)" />
+                  <MenuItem fx:id="copyMenultem" mnemonicParsing="false" onAction="#copyMenultemPressed" text="复制(C)" />
+                  <MenuItem fx:id="pasteMenultem" mnemonicParsing="false" onAction="#pasteMenultemPressed" text="粘贴(P)" />
+                  <MenuItem fx:id="delMenultem" mnemonicParsing="false" onAction="#delMenultemPressed" text="删除(L)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="使用Bing搜索..." />
+                  <MenuItem fx:id="findMenultem" mnemonicParsing="false" onAction="#findMenultemPressed" text="查找(F）" />
+                  <MenuItem fx:id="findDownMenultm" mnemonicParsing="false" onAction="#findDownMenultmPressed" text="查找下一个(N)" />
+                  <MenuItem fx:id="findUpMenultm" mnemonicParsing="false" text="查找上一个(V)" />
+                  <MenuItem fx:id="replaceMenultm" mnemonicParsing="false" onAction="#replaceMenultmPressed" text="替换(R)" />
+                  <MenuItem fx:id="turnToMenultem" mnemonicParsing="false" onAction="#turnToMenultemPressed" text="转到(G)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="selectAllMenultem" mnemonicParsing="false" onAction="#selectAllMenultemPressed" text="全选(A)" />
+                  <MenuItem fx:id="timeDateMenultem" mnemonicParsing="false" onAction="#timeDateMenultemPressed" text="时间/日期(D)" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="格式(O)">
+            <items>
+                  <CheckMenuItem fx:id="autoWrapMenultem" mnemonicParsing="false" onAction="#autoWrapMenultemPressed" selected="true" text="自动换行(W)" />
+              <MenuItem fx:id="textFontMenultem" mnemonicParsing="false" onAction="#textFontMenultemPressed" text="字体(F)" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="查看(V)">
+               <items>
+                  <Menu mnemonicParsing="false" text="缩放(Z)">
+                    <items>
+                      <MenuItem fx:id="largeZoomMenultem" mnemonicParsing="false" onAction="#largeZoomMenultemPressed" text="放大(L)" />
+                        <MenuItem fx:id="smallZoomMenultem" mnemonicParsing="false" onAction="#smallZoomMenultemPressed" text="缩小(O)" />
+                        <MenuItem fx:id="restoreDefaultZoomMenultem" mnemonicParsing="false" onAction="#restoreDefaultZoomMenultemPressed" text="恢复默认缩放" />
+                    </items>
+                  </Menu>
+                  <CheckMenuItem fx:id="statusBarCheckMenuItem" mnemonicParsing="false" onAction="#statusBarCheckMenuItemPressed" selected="true" text="状态栏(S)" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助(H)">
+              <items>
+                <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#helpMenuItemPressed" text="查看帮助(H）" />
+                  <MenuItem mnemonicParsing="false" text="发送反馈(F)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="aboutMenultem" mnemonicParsing="false" onAction="#aboutMenuItemPressed" text="关于记事本(A)" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox fx:id="statusBar" minHeight="25.0" prefHeight="25.0" prefWidth="750.0" spacing="20.0" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <Label fx:id="RCLable" alignment="CENTER" text="第1行, 第1列, 0个字" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="zoomLable" text="100%" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label text="Windows(CRLF)" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label contentDisplay="CENTER" text="UTF-8" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <TextArea fx:id="textArea" wrapText="true" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

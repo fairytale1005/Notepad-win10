@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ReplaceController">
+   <children>
+      <TextField fx:id="searchTextField" layoutX="140.0" layoutY="30.0" />
+      <TextField fx:id="replaceTextField" layoutX="140.0" layoutY="80.0" />
+      <Text layoutX="25.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查找内容(N):" />
+      <Text layoutX="25.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="替换为(P):" />
+      <Button fx:id="searchNextButton" layoutX="367.0" layoutY="30.0" mnemonicParsing="false" onAction="#searchNextButtonPressed" text="查找下一个(F)" />
+      <Button fx:id="replaceButton" layoutX="367.0" layoutY="70.0" mnemonicParsing="false" onAction="#replaceButtonPressed" text="替换(R)" />
+      <Button fx:id="replaceAllButton" layoutX="368.0" layoutY="110.0" mnemonicParsing="false" onAction="#replaceAllButtonPressed" text="全部替换(A)" />
+      <Button fx:id="cancleButton" layoutX="368.0" layoutY="151.0" mnemonicParsing="false" onAction="#cancleButtonPressed" text="取消" />
+      <CheckBox fx:id="caseSensitiveCheckBox" layoutX="31.0" layoutY="155.0" mnemonicParsing="false" text="区分大小写(C)" />
+      <CheckBox fx:id="loopCheckBox" layoutX="31.0" layoutY="185.0" mnemonicParsing="false" text="循环(R)" />
+   </children>
+</AnchorPane>
